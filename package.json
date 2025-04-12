@@ -1,6 +1,6 @@
 {
   "name": "domain-check-mcp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "description": "Domain Check MCP server using inofficial ionos api",
   "author": "Sebastian Boehler",
