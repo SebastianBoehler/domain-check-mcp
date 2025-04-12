@@ -20,7 +20,7 @@ const getHeaders = (market: Market) => ({
 // Initialize MCP server
 const server = new McpServer({
   name: "Domain Check MCP",
-  version: "1.0.1"
+  version: "1.0.0"
 });
 
 // Domain Availability Check
