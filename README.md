@@ -23,19 +23,27 @@ Or using npx:
 npx domain-check-mcp
 ```
 
-## Usage
-
-After installation, the MCP server will start automatically:
-
-```bash
-domain-check-mcp
-```
-
 ## Available Tools
 
 - `check_domain_availability` - Checks if a domain is available
 - `get_domain_recommendations` - Gets alternative domain suggestions
 - `get_sedo_offers` - Checks Sedo marketplace for domain offers
+
+## Recommended MCP Configuration
+
+For reliable operation, use an absolute path with Node rather than npx:
+
+```json
+{
+  "domain": {
+    "command": "node",
+    "args": ["/path/to/domain-check-mcp/dist/index.js"]
+  }
+}
+```
+
+Replace `/path/to/` with the actual path where you cloned this repository.
+The `npx -y domain-check-mcp` command fails for some reason.
 
 ## Development
 
