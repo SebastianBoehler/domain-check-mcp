@@ -1,0 +1,24 @@
+{
+  "name": "domain-check-mcp",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "description": "Domain Check MCP server using inofficial ionos api",
+  "author": "Sebastian Boehler",
+  "type": "module",
+  "bin": {
+    "domain-check-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "axios": "^1.6.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
