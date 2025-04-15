@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import axios, { AxiosError } from 'axios';
@@ -27,7 +28,7 @@ const server = new McpServer({
 server.tool("check_domain_availability", 
   { 
     domain: z.string().min(1),
-    market: Market.default("US")
+    market: Market.default("US").describe("Market region, prices in USD or EUR")
   },
   async ({ domain, market }) => {
     const endpoint = "/domain/status";
@@ -49,8 +50,8 @@ server.tool("check_domain_availability",
 server.tool("get_domain_recommendations",
   { 
     domain: z.string().min(1),
-    limit: z.number().int().positive().default(10),
-    market: Market.default("US")
+    limit: z.number().int().positive().default(10).describe("Number of recommendations"),
+    market: Market.default("US").describe("Market region, prices in USD or EUR")
   },
   async ({ domain, limit, market }) => {
     const endpoint = "/domain/domrec";
@@ -72,7 +73,7 @@ server.tool("get_domain_recommendations",
 server.tool("get_sedo_offers",
   { 
     domain: z.string().min(1),
-    market: Market.default("US")
+    market: Market.default("US").describe("Market region, prices in USD or EUR")
   },
   async ({ domain, market }) => {
     const endpoint = "/domain/sedo";

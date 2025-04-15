@@ -31,27 +31,50 @@ npx domain-check-mcp
 
 ## Recommended MCP Configuration
 
-For reliable operation, use an absolute path with Node rather than npx:
+To use the `domain-check-mcp` server in your windsuf/mcp_config.json, configure it as follows:
 
 ```json
 {
-  "domain": {
-    "command": "node",
-    "args": ["/path/to/domain-check-mcp/dist/index.js"]
+  "mcpServers": {
+    "domain": {
+      "command": "npx",
+      "args": ["-y", "domain-check-mcp"]
+    }
   }
 }
 ```
 
-Replace `/path/to/` with the actual path where you cloned this repository.
-The `npx -y domain-check-mcp` command fails for some reason.
+This will launch the domain MCP server using `npx` directly, ensuring you always use the latest published version.
+
+## Quick Start
+
+1. Install (if not using npx):
+   ```sh
+   npm install -g domain-check-mcp
+   # or
+   bun add -g domain-check-mcp
+   ```
+2. Or run directly (recommended):
+   ```sh
+   npx -y domain-check-mcp
+   ```
 
 ## Development
 
-```bash
-npm install
-npm run build
-npm start
-```
+- For local development, build with:
+  ```sh
+  bun run build
+  # or
+  npm run build
+  ```
+- Then run:
+  ```sh
+  node build/index.js
+  ```
+
+## Configuration
+
+Refer to the example above for the recommended setup in `mcp_config.json`.
 
 ## Disclaimer
 
