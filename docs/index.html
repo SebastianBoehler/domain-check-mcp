@@ -31,26 +31,21 @@
       <ul class="list-disc ml-5 space-y-4">
         <li>
           <strong>Check Domain Availability</strong><br>
-          <span class="text-gray-600">via IONOS API</span><br>
-          <code>domain-check-mcp check &lt;domain&gt;</code>
+          <span class="text-gray-600">via IONOS API. Returns availability status and domain pricing information.</span>
         </li>
         <li>
           <strong>Get Domain Recommendations</strong><br>
-          <span class="text-gray-600">Fetches related domain suggestions</span><br>
-          <code>domain-check-mcp recommend &lt;domain&gt;</code>
+          <span class="text-gray-600">Fetches related domain suggestions.</span>
         </li>
         <li>
           <strong>Fetch Sedo Offers</strong><br>
-          <span class="text-gray-600">Retrieves current offers from Sedo marketplace</span><br>
-          <code>domain-check-mcp sedo &lt;domain&gt;</code>
+          <span class="text-gray-600">Retrieves current offers from Sedo marketplace.</span>
+        </li>
+        <li>
+          <strong>Check Domain Pricing</strong><br>
+          <span class="text-gray-600">Supports pricing checks for domains, returning up-to-date pricing details where available.</span>
         </li>
       </ul>
-    </section>
-
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold mb-3">Usage</h2>
-      <p>Run commands in your terminal:</p>
-      <pre class="bg-gray-100 p-4 rounded"><code>npx domain-check-mcp check example.com</code></pre>
     </section>
 
     <section class="mb-8 bg-white shadow p-6 rounded-lg">
@@ -69,8 +64,10 @@
 
     <section class="mb-8">
       <h2 class="text-2xl font-semibold mb-3">Installation</h2>
-      <p>Install globally via npm:</p>
-      <pre class="bg-gray-100 p-4 rounded"><code>npm install -g domain-check-mcp</code></pre>
+      <p>Install globally via npm or use npx:</p>
+      <pre class="bg-gray-100 p-4 rounded"><code>npm install -g domain-check-mcp
+# or just use
+npx domain-check-mcp</code></pre>
     </section>
 
     <footer class="pt-6 border-t border-gray-200 text-sm text-gray-600">
